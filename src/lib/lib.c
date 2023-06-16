@@ -35,6 +35,12 @@ void swap(array *input_array, int index_1, int index_2) {
   input_array->array_pointer[index_1] = input_array->array_pointer[index_2];
   input_array->array_pointer[index_2] = temp;
 }
-void left_rotate(array *);
+void left_rotate(array *input_array) {
+  int temp = input_array->array_pointer[0];
+  for (int i = 0; i < input_array->length - 1; i++) {
+    input_array->array_pointer[i] = input_array->array_pointer[i + 1];
+  }
+  input_array->array_pointer[input_array->length - 1] = temp;
+}
 void right_rotate(array *);
 void cyclic_input(array *);

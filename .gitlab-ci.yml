@@ -1,0 +1,5 @@
+build test:
+  image: gcc
+  script:
+    - make run
+    - make r_run

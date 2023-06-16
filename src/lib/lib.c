@@ -49,4 +49,12 @@ void right_rotate(array *input_array) {
   }
   input_array->array_pointer[0] = temp;
 }
-void cyclic_input(array *);
+void cyclic_input(array *input_array) {
+  int value;
+  int i = 0;
+  while (scanf("%d", &value) != EOF) {
+    i %= input_array->length;
+    input_array->array_pointer[i] = value;
+    i++;
+  }
+}

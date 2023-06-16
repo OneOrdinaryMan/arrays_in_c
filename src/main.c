@@ -23,6 +23,11 @@ int main() {
   array input;
   input.length = length;
   input.array_pointer = input_array;
+
+  for (int i = 0; i < input.length; i++) {
+    input.array_pointer[i] = 0;
+  }
+
   assign_index(&input, 0, 1);
   print_array(&input);
   return 0;

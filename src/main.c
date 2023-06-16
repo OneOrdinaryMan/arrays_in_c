@@ -15,8 +15,13 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
+#include "lib/lib.h"
 #include <stdio.h>
 int main() {
-  printf("Hello, world!\n");
+  int length = 5;
+  int input_array[length];
+  array input;
+  input.length = length;
+  input.array_pointer = input_array;
   return 0;
 }

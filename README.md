@@ -3,7 +3,7 @@ Arrays in c are just pointers. They don't contain the size of the array. Therefo
 to the function. Functions applicable to array are,
 
 - [x] Assign index
-- [ ] Search
+- [x] Search
 - [ ] Swap
 - [ ] Left rotate
 - [ ] Right rotate
@@ -22,6 +22,19 @@ void assign_index(array *input_array, int index, int value) {
 }
 ```
 ## Search
+Does a linear search across the array. Returns -1 if value not found.
+
+__Psuedo Code__
+```c
+int search(array *input_array, int value) {
+  for (int i = 0; i < input_array->length; i++) {
+    if (input_array->array_pointer[i] == value) {
+      return i;
+    }
+  }
+  return -1;
+}
+```
 ## Swap
 ## Left rotate
 ## Right rotate

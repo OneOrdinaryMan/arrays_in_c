@@ -42,5 +42,11 @@ void left_rotate(array *input_array) {
   }
   input_array->array_pointer[input_array->length - 1] = temp;
 }
-void right_rotate(array *);
+void right_rotate(array *input_array) {
+  int temp = input_array->array_pointer[input_array->length - 1];
+  for (int i = input_array->length - 1; i > 0; i--) {
+    input_array->array_pointer[i] = input_array->array_pointer[i - 1];
+  }
+  input_array->array_pointer[0] = temp;
+}
 void cyclic_input(array *);

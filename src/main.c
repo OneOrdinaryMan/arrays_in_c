@@ -34,5 +34,7 @@ int main() {
   print_array(&input);
   left_rotate(&input);
   print_array(&input);
+  right_rotate(&input);
+  print_array(&input);
   return 0;
 }

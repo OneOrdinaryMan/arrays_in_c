@@ -9,7 +9,7 @@ TARGET_RELEASE=$(TARGET_DIR)/$(TARGET)_release
 SRC_DIR=src
 MAIN_FILE=$(SRC_DIR)/$(TARGET).c
 LIB_DIR=$(SRC_DIR)/lib
-LIB_FILES=$(wildcard $(LIBDIR)/*.c)
+LIB_FILES=$(wildcard $(LIB_DIR)/*.c)
 SRC_FILES=$(MAIN_FILE) $(LIB_FILES)
 .DEFAULT_GOAL:=debug
 debug: $(TARGET_DEBUG)

@@ -23,5 +23,7 @@ int main() {
   array input;
   input.length = length;
   input.array_pointer = input_array;
+  assign_index(&input, 0, 1);
+  print_array(&input);
   return 0;
 }

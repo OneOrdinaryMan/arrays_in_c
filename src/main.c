@@ -17,6 +17,7 @@
 */
 #include "lib/lib.h"
 #include <stdio.h>
+
 int main() {
   int length = 5;
   int input_array[length];

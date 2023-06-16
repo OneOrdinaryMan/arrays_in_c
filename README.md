@@ -5,7 +5,7 @@ to the function. Functions applicable to array are,
 - [x] Assign index
 - [x] Search
 - [x] Swap
-- [ ] Left rotate
+- [x] Left rotate
 - [ ] Right rotate
 - [ ] Cyclic input
 ## Assign index
@@ -51,6 +51,18 @@ void swap(array *input_array, int index_1, int index_2) {
 }
 ```
 ## Left rotate
+Rotates the array to left.
+
+__Psuedo Code__
+```c
+void left_rotate(array *input_array) {
+  int temp = input_array->array_pointer[0];
+  for (int i = 0; i < input_array->length - 1; i++) {
+    input_array->array_pointer[i] = input_array->array_pointer[i + 1];
+  }
+  input_array->array_pointer[input_array->length - 1] = temp;
+}
+```
 ## Right rotate
 ## Cyclic input
 # Licence

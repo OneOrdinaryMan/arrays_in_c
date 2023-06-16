@@ -6,8 +6,10 @@ debug test:
   image: gcc
   script:
     - make
+    - make test
 release test:
   stage: release
   image: gcc
   script:
     - make release
+    - make r_test

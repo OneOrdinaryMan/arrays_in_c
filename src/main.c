@@ -15,8 +15,24 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
+#include "lib/lib.h"
 #include <stdio.h>
+
 int main() {
-  printf("Hello, world!\n");
+  int length = 5;
+  int input_array[length];
+  array input;
+  input.length = length;
+  input.array_pointer = input_array;
+  cyclic_input(&input);
+  print_array(&input);
+  assign_index(&input, 3, 7);
+  swap(&input, 3, 2);
+  printf("%d\n", search(&input, 7));
+  print_array(&input);
+  left_rotate(&input);
+  print_array(&input);
+  right_rotate(&input);
+  print_array(&input);
   return 0;
 }

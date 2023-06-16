@@ -1,6 +1,13 @@
-build test:
+stages:
+  - debug
+  - release
+debug test:
+  stage: debug
   image: gcc
   script:
     - make
-    - make run
-    - make r_run
+release test:
+  stage: release
+  image: gcc
+  script:
+    - make release

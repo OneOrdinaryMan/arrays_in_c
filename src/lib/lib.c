@@ -26,7 +26,15 @@ int search(array *input_array, int value) {
   }
   return -1;
 }
-void swap(array *, int, int);
+void swap(array *input_array, int index_1, int index_2) {
+  if (index_1 >= input_array->length || index_2 >= input_array->length) {
+    printf("Index out of bounds\n");
+    return;
+  }
+  int temp = input_array->array_pointer[index_1];
+  input_array->array_pointer[index_1] = input_array->array_pointer[index_2];
+  input_array->array_pointer[index_2] = temp;
+}
 void left_rotate(array *);
 void right_rotate(array *);
 void cyclic_input(array *);

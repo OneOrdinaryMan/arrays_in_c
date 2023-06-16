@@ -29,6 +29,7 @@ int main() {
   }
 
   assign_index(&input, 3, 7);
+  swap(&input, 3, 2);
   printf("%d\n", search(&input, 7));
   print_array(&input);
   return 0;

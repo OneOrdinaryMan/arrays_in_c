@@ -6,7 +6,7 @@ to the function. Functions applicable to array are,
 - [x] Search
 - [x] Swap
 - [x] Left rotate
-- [ ] Right rotate
+- [x] Right rotate
 - [ ] Cyclic input
 ## Assign index
 Assigns the index the value given. If index is greater than the size of the array, returns with out of bounds error.
@@ -64,6 +64,18 @@ void left_rotate(array *input_array) {
 }
 ```
 ## Right rotate
+Rotates the array to right.
+
+__Psuedo Code__
+```c
+void right_rotate(array *input_array) {
+  int temp = input_array->array_pointer[input_array->length - 1];
+  for (int i = input_array->length - 1; i > 0; i--) {
+    input_array->array_pointer[i] = input_array->array_pointer[i - 1];
+  }
+  input_array->array_pointer[0] = temp;
+}
+```
 ## Cyclic input
 # Licence
 The project is licenced under <mark> GNU GPL V3.0</mark> licence. Feel free to use this project.

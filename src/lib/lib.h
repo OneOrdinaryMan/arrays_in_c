@@ -8,6 +8,7 @@ typedef struct {
   int *array_pointer;
 } array;
 
+void print_array(array *);
 void assign_index(array *, int, int);
 int search(array *, int);
 void swap(array *, int, int);

@@ -5,7 +5,13 @@ typedef struct {
   int *array_pointer;
 } array;
 
-void assign_index(array *, int, int);
+void print_array(array *input_array) {
+  for (int i = 0; i < input_array->length; i++) {
+    printf("%d\t", input_array->array_pointer[i]);
+  }
+  printf("\n");
+}
+void assign_index(array *input_array, int index, int value);
 int search(array *, int);
 void swap(array *, int, int);
 void left_rotate(array *);

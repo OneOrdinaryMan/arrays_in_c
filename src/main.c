@@ -28,7 +28,8 @@ int main() {
     input.array_pointer[i] = 0;
   }
 
-  assign_index(&input, 0, 1);
+  assign_index(&input, 3, 7);
+  printf("%d\n", search(&input, 7));
   print_array(&input);
   return 0;
 }

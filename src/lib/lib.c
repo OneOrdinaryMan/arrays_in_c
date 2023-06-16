@@ -18,7 +18,14 @@ void assign_index(array *input_array, int index, int value) {
   }
   input_array->array_pointer[index] = value;
 }
-int search(array *, int);
+int search(array *input_array, int value) {
+  for (int i = 0; i < input_array->length; i++) {
+    if (input_array->array_pointer[i] == value) {
+      return i;
+    }
+  }
+  return -1;
+}
 void swap(array *, int, int);
 void left_rotate(array *);
 void right_rotate(array *);

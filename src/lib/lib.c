@@ -11,7 +11,13 @@ void print_array(array *input_array) {
   }
   printf("\n");
 }
-void assign_index(array *input_array, int index, int value);
+void assign_index(array *input_array, int index, int value) {
+  if (index >= input_array->length) {
+    printf("Index out of bounds\n");
+    return;
+  }
+  input_array->array_pointer[index] = value;
+}
 int search(array *, int);
 void swap(array *, int, int);
 void left_rotate(array *);

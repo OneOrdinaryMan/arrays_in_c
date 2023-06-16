@@ -7,7 +7,7 @@ to the function. Functions applicable to array are,
 - [x] Swap
 - [x] Left rotate
 - [x] Right rotate
-- [ ] Cyclic input
+- [x] Cyclic input
 ## Assign index
 Assigns the index the value given. If index is greater than the size of the array, returns with out of bounds error.
 
@@ -77,5 +77,19 @@ void right_rotate(array *input_array) {
 }
 ```
 ## Cyclic input
+adds the user input cyclically until EOF to the array.
+
+__Psuedo Code__
+```c
+void cyclic_input(array *input_array) {
+  int value;
+  int i = 0;
+  while (scanf("%d", &value) != EOF) {
+    i %= input_array->length;
+    input_array->array_pointer[i] = value;
+    i++;
+  }
+}
+```
 # Licence
 The project is licenced under <mark> GNU GPL V3.0</mark> licence. Feel free to use this project.

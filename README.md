@@ -4,7 +4,7 @@ to the function. Functions applicable to array are,
 
 - [x] Assign index
 - [x] Search
-- [ ] Swap
+- [x] Swap
 - [ ] Left rotate
 - [ ] Right rotate
 - [ ] Cyclic input
@@ -36,6 +36,20 @@ int search(array *input_array, int value) {
 }
 ```
 ## Swap
+Swaps the elements in the two positions. If any of the positions are greater than or equal to the length, returns with out of bounds error.
+
+__Psuedo Code__
+```c
+void swap(array *input_array, int index_1, int index_2) {
+  if (index_1 >= input_array->length || index_2 >= input_array->length) {
+    printf("Index out of bounds\n");
+    return;
+  }
+  int temp = input_array->array_pointer[index_1];
+  input_array->array_pointer[index_1] = input_array->array_pointer[index_2];
+  input_array->array_pointer[index_2] = temp;
+}
+```
 ## Left rotate
 ## Right rotate
 ## Cyclic input
